@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 export default makeStyles({
   media: {
     height: 0,
-    paddingTop: '56.25%',
+    paddingTop: '56%',
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
     backgroundBlendMode: 'darken',
   },
@@ -29,8 +29,8 @@ export default makeStyles({
   },
   overlay2: {
     position: 'absolute',
-    top: '20px',
-    right: '20px',
+    top: '10px',
+    right: '10px',
     color: 'white',
   },
   grid: {
@@ -42,7 +42,7 @@ export default makeStyles({
     margin: '20px',
   },
   title: {
-    padding: '0 16px',
+    padding: '0 12px',
   },
   cardActions: {
     padding: '0 16px 8px 16px',
