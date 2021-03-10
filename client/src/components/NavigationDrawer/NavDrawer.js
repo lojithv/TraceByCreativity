@@ -138,7 +138,7 @@ export default function MiniDrawer() {
         <List>
           {['Inbox', 'Starred', 'Send email', 'Inbox'].map((text, index) => (
             <ListItem button key={text}>
-              <ListItemIcon>{index % 3 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>
           ))}
