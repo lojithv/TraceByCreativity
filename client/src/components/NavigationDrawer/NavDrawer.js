@@ -1,9 +1,3 @@
-/* eslint-disable react/jsx-closing-bracket-location */
-/* eslint-disable react/jsx-indent-props */
-/* eslint-disable react/jsx-closing-tag-location */
-/* eslint-disable indent */
-/* eslint-disable react/jsx-indent */
-/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import clsx from 'clsx';
 import { useTheme } from '@material-ui/core/styles';
@@ -30,7 +24,6 @@ import { Link, useHistory, useLocation } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import decode from 'jwt-decode';
 
-import memories from '../../images/memories.png';
 import * as actionType from '../../constants/actionTypes';
 import useStyles from './Styles';
 
@@ -82,17 +75,17 @@ export default function MiniDrawer() {
         })}
       >
         <Toolbar>
-        <IconButton
-      color="inherit"
-      aria-label="open drawer"
-      onClick={handleDrawerOpen}
-      edge="start"
-      className={clsx(classes.menuButton, {
-        [classes.hide]: open,
-      })}
-    >
-      <MenuIcon />
-    </IconButton>
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            onClick={handleDrawerOpen}
+            edge="start"
+            className={clsx(classes.menuButton, {
+              [classes.hide]: open,
+            })}
+          >
+            <MenuIcon />
+          </IconButton>
           <Typography variant="h6" noWrap>
             Mini variant drawer
           </Typography>
@@ -111,17 +104,17 @@ export default function MiniDrawer() {
           </div>
           <div className={classes.grow} />
           <Toolbar className={classes.toptoolbar}>
-        {user?.result ? (
-          <div className={classes.profile}>
-            <Avatar className={classes.purple} alt={user?.result.name} src={user?.result.imageUrl}>{user?.result.name.charAt(0)}</Avatar>
-            <Typography className={classes.userName} variant="h6">{user?.result.name}</Typography>
-            <Button variant="contained" className={classes.logout} color="secondary" onClick={logout}>Logout</Button>
-          </div>
-        ) : (
-          <Button component={Link} to="/auth" variant="contained" color="primary">Sign In</Button>
-        )}
-      </Toolbar>
-      </Toolbar>
+            {user?.result ? (
+              <div className={classes.profile}>
+                <Avatar className={classes.purple} alt={user?.result.name} src={user?.result.imageUrl}>{user?.result.name.charAt(0)}</Avatar>
+                <Typography className={classes.userName} variant="h6">{user?.result.name}</Typography>
+                <Button variant="contained" className={classes.logout} color="secondary" onClick={logout}>Logout</Button>
+              </div>
+            ) : (
+              <Button component={Link} to="/auth" variant="contained" color="primary">Sign In</Button>
+            )}
+          </Toolbar>
+        </Toolbar>
       </AppBar>
       <Drawer
         variant="permanent"
